@@ -18,7 +18,7 @@
     		</div>
         </div>
         <div id="button">
-            <img v-bind:src="'../static/' + buttonimg" v-on:click="clear" />
+            <img v-bind:src="'/static/' + buttonimg" v-on:click="clear" />
         </div>
 		<!--<button v-on:click="analyze" id="analyze-button">Check</button>-->
         <div id="resultcontainer" class="container">
@@ -44,7 +44,7 @@
         </div>
 	</div>
     <script src="../static/functions.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://vuejs.org/js/vue.min.js"></script>
     <script src="../static/app.js"></script>
 </body>
 </html>
