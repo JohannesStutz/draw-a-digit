@@ -83,8 +83,8 @@ var app = new Vue({
             self.probs.push(value)
           }
           self.output = response.result
+          self.buttonimg = "clear.png"
         }
-        self.buttonimg = "clear.png"
       };
 
       var fileData = new FormData();
