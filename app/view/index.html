@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Draw a number</title>
+    <link rel="stylesheet" href="../static/main.css">
+    <link rel="shortcut icon" type="image/png" href="../static/favicon-32x32.png"/>
+</head>
+<body>
+    <div id="app">
+        <div class="break"></div>
+        <div id="drawcontainer" class="container">
+            <h2>Draw a number! ✏️</h2>
+            <span class="small">...only one, please.</span>
+    		<div id="canvaswrapper">
+    			<canvas @mousedown="startPainting" @mouseup="finishedPainting" @mousemove="draw_mouse" @touchstart="startPainting" @touchend="finishedPainting" @touchmove="draw_touch" id="canvas"></canvas>
+    		</div>
+        </div>
+        <div id="button">
+            <img v-bind:src="'../static/' + buttonimg" v-on:click="clear" />
+        </div>
+		<!--<button v-on:click="analyze" id="analyze-button">Check</button>-->
+        <div id="resultcontainer" class="container">
+            <h2>Predicted number 🔮</h2>
+    		<div id="resultwrapper">
+                <div id='result'>
+                	<label id='result-label'>{{ output }}</label>
+              	</div>
+                <div id='probs'>
+                    <table>
+                        <tr v-for="(cat, index) in categories">
+                            <td><label>{{ cat }}</label></td>
+                            <td class="bars"><div class="bar" :id="'cat'+index" v-bind:style="{width: probs[index] +'%' }"> </div></td>
+                            <td><label>{{ probs[index] }}%</label></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="break"></div>
+        <div class="siteinfo">
+            Johannes Stutz 2020. <a href="https://github.com/JohannesStutz/draw-a-number">GitHub</a>
+        </div>
+	</div>
+    <script src="../static/functions.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="../static/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+html, body {
+	height: 100%;
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    color: black;
+    overscroll-behavior: none;
+}
+
+#app {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	flex-wrap: wrap;
+	height: 100%;
+}
+
+body, #app {
+	background-color: #eee;
+}
+
+.break {
+	flex-basis: 100%;
+  	height: 0;
+}
+
+a {
+	color: rgb(0,177,144);
+	text-decoration: none;
+}
+
+#drawcontainer h2 {
+	margin-bottom: 0px;
+}
+
+.small {
+	font-size: 75%;
+}
+
+.container {
+	background-color: #f7f7f7;
+	border: 1px solid #999;
+	margin: 15px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15), 0 6px 20px 0 rgba(0, 0, 0, 0.13);
+}
+
+#canvaswrapper, #resultwrapper {
+	border-top: 1px solid #999;
+}
+
+#canvaswrapper {
+	margin-top: 20px;
+	width: 250px;
+}
+
+#canvaswrapper, #result {
+	height: 250px;
+}
+
+#canvas {
+    touch-action: none;
+    cursor: pointer;
+}
+
+#resultwrapper {
+	display: flex;
+}
+
+#result {
+	background-color: black;
+	width: 200px;
+	text-align: center;
+	color: white;
+	font-size: 200px;
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+#probs {
+	width: 180px;
+	height: 250px;
+	background: #eee;
+	color: black;
+	font-size: 90%;
+}
+
+#probs table {
+	height: 100%;
+}
+
+.bars {
+	width: 100%;
+}
+
+.bar {
+	background-color: rgb(0,177,144);
+	width: 10px;
+	height: 20px;
+	float: left;
+	box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+#button {
+	cursor: pointer;
+	width: 64px;
+	margin: 20px;
+	padding-top: 10px;
+}
+
+#button img {
+	width: 64px;
+	fill: white;
+}
