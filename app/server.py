@@ -10,7 +10,7 @@ from starlette.middleware.cors import CORSMiddleware
 from starlette.responses import HTMLResponse, JSONResponse
 from starlette.staticfiles import StaticFiles
 
-export_file_url = 'https://drive.google.com/uc?export=download&id=1Fz7CmNl0B_0iPbG3XX_kx__HxVlWGBvu'
+export_file_url = 'https://www.dropbox.com/s/xqbre65vsa8jr06/export-mnist.pkl?dl=1'
 export_file_name = 'export-mnist.pkl'
 
 path = Path(__file__).parent
