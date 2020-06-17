@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Draw a number</title>
+    <title>Draw a digit</title>
     <link rel="stylesheet" href="../static/main.css">
     <link rel="shortcut icon" type="image/png" href="../static/favicon-32x32.png"/>
 </head>
@@ -11,7 +11,7 @@
     <div id="app">
         <div class="break"></div>
         <div id="drawcontainer" class="container">
-            <h2>Draw a number! ✏️</h2>
+            <h2>Draw a digit! ✏️</h2>
             <span class="small">...only one, please.</span>
     		<div id="canvaswrapper">
     			<canvas @mousedown="startPainting" @mouseup="finishedPainting" @mousemove="draw_mouse" @touchstart="startPainting" @touchend="finishedPainting" @touchmove="draw_touch" id="canvas"></canvas>
